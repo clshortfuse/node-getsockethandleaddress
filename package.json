@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "binary": {
+    "module_name": "getSocketHandleAddress",
+    "module_path": "build/{configuration}/"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
