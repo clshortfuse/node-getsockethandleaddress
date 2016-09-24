@@ -25,9 +25,8 @@ void getAddress(const FunctionCallbackInfo<Value>& args) {
   void *handleWrap = args[0]->ToObject()->GetAlignedPointerFromInternalField(0);  
   uv_handle_t* handle = getTcpHandle(handleWrap);  
   uv_tcp_t* tcpHandle = (uv_tcp_t*)handle;
-  SOCKET s = tcpHandle->socket;
-  uintptr_t address = reinterpret_cast<uintptr_t>(&s);    
-  args.GetReturnValue().Set(Number::New(isolate, address));
+  SOCKET s = tcpHandle->socket;  
+  args.GetReturnValue().Set(Number::New(isolate, s));
 }
 
 void getType(const FunctionCallbackInfo<Value>& args) {
