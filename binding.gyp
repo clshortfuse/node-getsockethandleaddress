@@ -1,8 +1,8 @@
 {
   "targets": [
     {
-      "target_name": "getSocketHandleAddress",
-      "sources": [ "getSocketHandleAddress.cc" ]
+      "target_name": "getsockethandleaddress",
+      "sources": [ "getsockethandleaddress.cc" ]
     }
   ]
 }

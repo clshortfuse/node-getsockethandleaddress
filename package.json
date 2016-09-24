@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "binary": {
-    "module_name": "getSocketHandleAddress",
+    "module_name": "getsockethandleaddress",
     "module_path": "build/{configuration}/"
   },
   "scripts": {
