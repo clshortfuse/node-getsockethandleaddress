@@ -23,12 +23,24 @@ uv_handle_t* getTcpHandle(void *handleWrap) {
 void getAddress(const FunctionCallbackInfo<Value>& args) {
   Isolate* isolate = args.GetIsolate();  
   void *handleWrap = args[0]->ToObject()->GetAlignedPointerFromInternalField(0);  
-  uv_handle_t* handle = getTcpHandle(handleWrap);
-  uintptr_t address = reinterpret_cast<uintptr_t>(handle);    
+  uv_handle_t* handle = getTcpHandle(handleWrap);  
+  uv_tcp_t* tcpHandle = (uv_tcp_t*)handle;
+  SOCKET s = tcpHandle->socket;
+  uintptr_t address = reinterpret_cast<uintptr_t>(&s);    
   args.GetReturnValue().Set(Number::New(isolate, address));
 }
+
+void getType(const FunctionCallbackInfo<Value>& args) {
+  Isolate* isolate = args.GetIsolate();  
+  void *handleWrap = args[0]->ToObject()->GetAlignedPointerFromInternalField(0);  
+  uv_handle_t* handle = getTcpHandle(handleWrap);
+  int handleType = handle->type;  
+  args.GetReturnValue().Set(Number::New(isolate, handleType));
+}
+
 void init(Local<Object> exports) {  
   NODE_SET_METHOD(exports, "getAddress", getAddress);
+  NODE_SET_METHOD(exports, "getType", getType);
 }
 NODE_MODULE(addon, init)
 }
