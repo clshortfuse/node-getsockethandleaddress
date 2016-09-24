@@ -1,0 +1,1 @@
+module.export = require('bindings')('getsockethandleaddress.node');
