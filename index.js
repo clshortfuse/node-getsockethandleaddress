@@ -1,1 +1,4 @@
-module.export = require('bindings')('getsockethandleaddress.node');
+var bindings = require('bindings')('getsockethandleaddress.node');
+module.exports = {
+  getAddress: bindings.getAddress
+};
