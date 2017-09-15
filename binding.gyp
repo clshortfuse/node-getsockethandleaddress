@@ -2,7 +2,11 @@
   "targets": [
     {
       "target_name": "getsockethandleaddress",
-      "sources": [ "getSocketHandleAddress.cc" ]
+      "conditions": [
+        ["OS == 'win'", {
+          "sources": [ "getSocketHandleAddress.cc" ]
+        }]
+      ]
     }
   ]
 }

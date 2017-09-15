@@ -12,6 +12,5 @@
   },
   "author": "",
   "license": "ISC",
-  "gypfile": true,
-  "os": [ "win32" ]
+  "gypfile": true
 }

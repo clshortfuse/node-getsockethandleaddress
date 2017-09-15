@@ -28,17 +28,8 @@ void getAddress(const FunctionCallbackInfo<Value>& args) {
   args.GetReturnValue().Set(Number::New(isolate, tcpHandle->socket));
 }
 
-void getType(const FunctionCallbackInfo<Value>& args) {
-  Isolate* isolate = args.GetIsolate();  
-  void *handleWrap = args[0]->ToObject()->GetAlignedPointerFromInternalField(0);  
-  uv_handle_t* handle = getTcpHandle(handleWrap);
-  int handleType = handle->type;  
-  args.GetReturnValue().Set(Number::New(isolate, handleType));
-}
-
 void init(Local<Object> exports) {  
   NODE_SET_METHOD(exports, "getAddress", getAddress);
-  NODE_SET_METHOD(exports, "getType", getType);
 }
 NODE_MODULE(addon, init)
 }
