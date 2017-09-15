@@ -11,7 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": {
-    "name": "Carlos Lopez Jr."
+    "name": "Carlos Lopez Jr.",
     "email": "clshortfuse@gmail.com",
     "url": "https://shortfuse.org"
   },
