@@ -10,7 +10,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": {
+    "name": "Carlos Lopez Jr."
+    "email": "clshortfuse@gmail.com",
+    "url": "https://shortfuse.org"
+  },
+  "repository": "github:clshortfuse/getsockethandleaddress",
   "license": "ISC",
   "gypfile": true
 }
