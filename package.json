@@ -17,5 +17,8 @@
   },
   "repository": "github:clshortfuse/getsockethandleaddress",
   "license": "ISC",
-  "gypfile": true
+  "gypfile": true,
+  "dependencies": {
+    "bindings": "^1.3.0"
+  }
 }
