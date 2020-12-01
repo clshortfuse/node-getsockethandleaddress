@@ -1,6 +1,6 @@
 {
   "name": "getsockethandleaddress",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "",
   "main": "index.js",
   "binary": {
@@ -15,7 +15,7 @@
     "email": "clshortfuse@gmail.com",
     "url": "https://shortfuse.org"
   },
-  "repository": "github:clshortfuse/getsockethandleaddress",
+  "repository": "github:clshortfuse/node-getsockethandleaddress",
   "license": "ISC",
   "gypfile": true,
   "dependencies": {
